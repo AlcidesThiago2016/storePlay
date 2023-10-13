@@ -1,10 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-card-price',
   templateUrl: './card-price.component.html',
   styleUrls: ['./card-price.component.css']
 })
-export class CardPriceComponent {
+export class CardPriceComponent implements OnInit{
+
+  @Input()
+  gameType:string="Digital PS4"
+  @Input()
+  gamePrice:string="R$ 399,00"
+  constructor(){}
+
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
 
 }
